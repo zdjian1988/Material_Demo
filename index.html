@@ -1,7 +1,6 @@
 <html>
     <head>
         <title>Material Demo</title>
-        <link rel="icon" type="image/x-icon" href="webflow_icons/favicon.png">
         <style>
             #model {
                 position: absolute;
@@ -11,9 +10,36 @@
                 height: 100%;
                 border-width: 0;
             }
+            #label {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                width: 200px;
+                height: 20px;
+                background-color: white;
+                text-align: center;
+                border-width: 2;
+            }
+            #materials {
+                position: fixed;
+                top: 40px;
+                left: 10px;
+                width: 200px;
+                height: 30px;
+                border-width: 2;
+            }
         </style>
     </head>
     <body>
         <iframe id="model" src="Material_Demo.html"></iframe>
+        <label id="label">Materials</label>
+        <select id="materials" name="metarials">
+            <optgroup label="Stone">
+                <option value="Asphalt">Asphalt</option>
+            </optgroup>
+            <optgroup label="Wood">
+                <option value="RoughWood">RoughWood</option>
+            </optgroup>
+        </select>
     </body>
 </html>
