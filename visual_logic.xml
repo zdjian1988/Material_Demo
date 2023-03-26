@@ -1,7 +1,7 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <tab name="init" type="InitTab" active="false" scrollx="19.99999999999966" scrolly="0" scale="0.9"></tab>
   <tab name="main" type="MainTab" active="false" scrollx="277.30057956347014" scrolly="0" scale="0.9"></tab>
-  <tab name="timer" type="SecondaryTab" active="true" scrollx="4.66668701171875" scrolly="61.1851921081543" scale="1">
+  <tab name="timer" type="SecondaryTab" active="true" scrollx="-35.464599609375" scrolly="42.13983917236317" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</variable>
       <variable id="8g{hz{Ck[J|$?YSX||E]">autorotate</variable>
@@ -42,8 +42,8 @@
       <field name="X_RAY">FALSE</field>
       <field name="DOUBLE_CLICK">FALSE</field>
       <field name="LEFT_BUTTON">FALSE</field>
-      <field name="MIDDLE_BUTTON">FALSE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">FALSE</field>
       <value name="VALUE">
         <shadow type="objectList" id="_k!9Fb*?b0h4H*UV@FcT">
           <field name="FIELDNAME">&lt;none&gt;</field>
