@@ -1,92 +1,153 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <tab name="init" type="InitTab" active="false" scrollx="19.99999999999966" scrolly="0" scale="0.9"></tab>
   <tab name="main" type="MainTab" active="false" scrollx="277.30057956347014" scrolly="0" scale="0.9"></tab>
-  <tab name="timer" type="SecondaryTab" active="false" scrollx="0" scrolly="-261" scale="0.9">
-    <block xmlns="https://developers.google.com/blockly/xml" type="setTimer" id="EDaDj8#QuN1ZTh_zq3.," x="130" y="290">
-      <value name="ID">
-        <shadow type="text" id="w:CsA0SrjVlqveZeZEDN">
-          <field name="TEXT">autorotate</field>
-        </shadow>
-      </value>
+  <tab name="timer" type="SecondaryTab" active="true" scrollx="4.66668701171875" scrolly="61.1851921081543" scale="1">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</variable>
+      <variable id="8g{hz{Ck[J|$?YSX||E]">autorotate</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="mGy:ASlk)gE54eal5n8)" x="130" y="70">
+      <field name="VAR" id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</field>
       <value name="VALUE">
-        <shadow type="math_number" id="!qHcWsD|N/$,Lbj1?n)4">
+        <block type="math_number" id="r;9J1a?N+msoP9QmlIDU">
           <field name="NUM">2</field>
-        </shadow>
+        </block>
       </value>
-      <value name="REPEAT">
-        <shadow type="math_number" id="`C2%qZ7x^[pF/0e~S]q+">
-          <field name="NUM">Infinity</field>
-        </shadow>
-      </value>
-      <statement name="DO">
+      <next>
         <block type="autoRotateCamera" id="SF!]o8DaehX`K.8ZnA5j">
           <field name="ON_OFF">ON</field>
           <value name="SPEED">
             <shadow type="math_number" id="Y=ywPiqDoTTx^l+HY~Kh">
               <field name="NUM">2</field>
             </shadow>
+            <block type="variables_get" id="?%^x~.{@lfIbz!VEE,O+">
+              <field name="VAR" id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</field>
+            </block>
           </value>
-        </block>
-      </statement>
-      <next>
-        <block type="whenClicked" id="h0t=1).pSW?.mwW`0t,9" inline="false">
-          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
-          <field name="X_RAY">FALSE</field>
-          <field name="DOUBLE_CLICK">FALSE</field>
-          <field name="LEFT_BUTTON">TRUE</field>
-          <field name="MIDDLE_BUTTON">TRUE</field>
-          <field name="RIGHT_BUTTON">TRUE</field>
-          <value name="VALUE">
-            <shadow type="objectList" id="_k!9Fb*?b0h4H*UV@FcT">
-              <field name="FIELDNAME">&lt;none&gt;</field>
-            </shadow>
-            <block type="allObjectList" id="NE1W}[y`l-EJ:[z$1,Hj"></block>
-          </value>
-          <statement name="DO">
-            <block type="autoRotateCamera" id="{j|36Lpr%65x@)TeG~q/">
-              <field name="ON_OFF">OFF</field>
-              <value name="SPEED">
-                <shadow type="math_number" id="W{rZTC;~%Kkj?+)~tVy|">
-                  <field name="NUM">2</field>
-                </shadow>
+          <next>
+            <block type="variables_set" id="R4b*cqVY%|VMw93J/Eg4">
+              <field name="VAR" id="8g{hz{Ck[J|$?YSX||E]">autorotate</field>
+              <value name="VALUE">
+                <block type="logic_boolean" id="FjS.!o(SgOw@,F+Qp:$[">
+                  <field name="BOOL">TRUE</field>
+                </block>
               </value>
-              <next>
-                <block type="setTimer" id="U[QY~aZ}DhfS[^DS4N`^">
-                  <value name="ID">
-                    <shadow type="text" id="c-=o{oX^z!D44Di;tpMj">
-                      <field name="TEXT">autorotate</field>
-                    </shadow>
-                  </value>
-                  <value name="VALUE">
-                    <shadow type="math_number" id="!MPb`KmMO^4]$DeR^/sn">
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="h0t=1).pSW?.mwW`0t,9" inline="true" x="130" y="250">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">FALSE</field>
+      <field name="MIDDLE_BUTTON">FALSE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="_k!9Fb*?b0h4H*UV@FcT">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="allObjectList" id="NE1W}[y`l-EJ:[z$1,Hj"></block>
+      </value>
+      <statement name="DO">
+        <block type="controls_ifelse" id="?J$}i;B:HS`1ZAmV~vPv">
+          <value name="IF0">
+            <block type="logic_compare" id="l#z.PJwOb}UHR%(fjFFu">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="wT)-}/.2U49uf!/ktfsA">
+                  <field name="VAR" id="8g{hz{Ck[J|$?YSX||E]">autorotate</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_boolean" id="oi`HU-!UDTGKGu,Gl7;z">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="variables_set" id="KZ7]g}u;3mqdN@XIi2eW">
+              <field name="VAR" id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</field>
+              <value name="VALUE">
+                <block type="math_arithmetic" id="XrUw7)8ZEVs~$8^hL7Mk">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <shadow type="math_number" id="9]ol{:x,L8oGf{Xcc}f#">
                       <field name="NUM">2</field>
                     </shadow>
+                    <block type="variables_get" id="rjZS.#OE9nTT[gPqhrcH">
+                      <field name="VAR" id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</field>
+                    </block>
                   </value>
-                  <value name="REPEAT">
-                    <shadow type="math_number" id="IiHFcaz|,[!BTW*=*gS/">
-                      <field name="NUM">Infinity</field>
+                  <value name="B">
+                    <shadow type="math_number" id="aY(@hx7uMdv,?1@i6o[(">
+                      <field name="NUM">2</field>
                     </shadow>
+                    <block type="math_number" id="R#jx36;}52x9l7nxL+7!">
+                      <field name="NUM">-1</field>
+                    </block>
                   </value>
-                  <statement name="DO">
-                    <block type="autoRotateCamera" id="{Xc[ICCc7hn0D;@Bwr0r">
-                      <field name="ON_OFF">ON</field>
-                      <value name="SPEED">
-                        <shadow type="math_number" id="YqZ.0(k([spvL/5%#]T3">
-                          <field name="NUM">2</field>
-                        </shadow>
+                </block>
+              </value>
+              <next>
+                <block type="autoRotateCamera" id="{j|36Lpr%65x@)TeG~q/">
+                  <field name="ON_OFF">OFF</field>
+                  <value name="SPEED">
+                    <shadow type="math_number" id="W{rZTC;~%Kkj?+)~tVy|">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="variables_get" id="QtmP7$EtF(_O7_nrcr--">
+                      <field name="VAR" id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" id="a{KDH`p2DQ~[.igT4N}n">
+                      <field name="VAR" id="8g{hz{Ck[J|$?YSX||E]">autorotate</field>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="B#cLUrrk2=v^KY8PW$dx">
+                          <field name="BOOL">FALSE</field>
+                        </block>
                       </value>
                     </block>
-                  </statement>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="autoRotateCamera" id="P)G#e5C!O+NR3e$(ZsMU">
+              <field name="ON_OFF">ON</field>
+              <value name="SPEED">
+                <shadow type="math_number" id="ua3V~R:ACc3n`r)s#%K8">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="variables_get" id="Sc5D~I7*@|ex4YRTWa,?">
+                  <field name="VAR" id="SAiC%#(xx+z#Vf[Ff|4[">rotatespeed</field>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" id="s6ZViMF0A9/g7r:6tjXQ">
+                  <field name="VAR" id="8g{hz{Ck[J|$?YSX||E]">autorotate</field>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="zh:/nh24:$~60Ohwj~%B">
+                      <field name="BOOL">TRUE</field>
+                    </block>
+                  </value>
                 </block>
               </next>
             </block>
           </statement>
         </block>
-      </next>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="math_number" id="J%bR=r5@pPtA$+T!EmCL" x="435" y="366">
+      <field name="NUM">2</field>
     </block>
   </tab>
-  <tab name="material" type="SecondaryTab" active="true" scrollx="-74.77951049804688" scrolly="1.3565292358398438" scale="1">
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="0RcEyk+E)f{a/*#dkjz-" x="30" y="310">
+  <tab name="material" type="SecondaryTab" active="false" scrollx="59.88079833984375" scrolly="50" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="0RcEyk+E)f{a/*#dkjz-" x="-70" y="-50">
       <field name="EVENT">mouseleave</field>
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -123,7 +184,7 @@
               <field name="FIELDNAME">&lt;none&gt;</field>
             </shadow>
             <block type="objectList" id=",OK-xF#Oa0HDL/w/F1Vh">
-              <field name="FIELDNAME">Materials</field>
+              <field name="FIELDNAME">Material</field>
             </block>
           </value>
           <next>
